@@ -7,7 +7,10 @@
                 {{ session('success') }}
             </div>
         @endif
-        <h1>Funcionarios</h1>
+        <div class="d-flex justify-content-between mb-3">
+            <h1>Funcionários</h1>
+            <a href="{{ route('employers.create') }}" class="btn btn-primary btn-sm" style="height: 30px;">Novo</a>
+        </div>
         <employer-list></employer-list>
         <table class="table">
             <thead>
