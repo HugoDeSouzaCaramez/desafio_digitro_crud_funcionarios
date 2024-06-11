@@ -19,19 +19,19 @@
                 @csrf
                 @method('PUT')
                 <input type="hidden" name="employer_id" value="{{ $workingHour->employer_id }}">
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="employer">Funcionario</label>
                     <input type="text" class="form-control" id="employer" name="employer" value="{{ $workingHour->employer->name }}" readonly>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="cpf">CPF</label>
                     <input type="text" class="form-control" id="cpf" name="cpf" value="{{ $workingHour->employer->cpf }}" readonly>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="hours_worked">Horas Lançadas</label>
                     <input type="number" class="form-control" id="hours_worked" name="hours_worked" value="{{ $workingHour->hours_worked }}" min="0">
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="date">Data</label>
                     <input type="date" class="form-control" id="date" name="date" value="{{ $workingHour->date }}">
                 </div>
