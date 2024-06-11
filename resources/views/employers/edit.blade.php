@@ -48,11 +48,6 @@
                             </div>
                             <button type="submit" class="btn btn-primary form-buttons">Salvar</button>
                         </form>
-                        <form action="{{ route('employers.destroy', $employer->id) }}" method="POST" style="margin-top: 20px;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger form-buttons" onclick="return confirm('Tem certeza que deseja excluir este funcionario?')">Excluir</button>
-                        </form>
                     </div>
                 </div>
             </div>
