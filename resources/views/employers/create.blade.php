@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="container">
-            <h1>Novo Funcionario</h1>
+            <h1>Cadastrar Funcionario</h1>
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -13,37 +13,35 @@
                 </ul>
             </div>
             @endif
-            <div class="card-body">
-                <form method="POST" action="{{ route('employers.store') }}">
-                    @csrf
-                    <div class="form-group mb-3">
-                        <label for="name">Nome:</label>
-                        <input type="text" name="name" id="name" class="form-control" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" class="form-control" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="cpf">CPF:</label>
-                        <input type="text" id="cpf" name="cpf" value="{{ old('cpf') }}" class="form-control" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-0" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="birth_date">Data de Nascimento:</label>
-                        <input type="date" id="birth_date" name="birth_date" value="{{ old('birth_date') }}" class="form-control" required>
-                    </div>
-                    <div class="form-groupm mb-5">
-                        <label for="civil_state">Estado Civil:</label>
-                        <select id="civil_state" name="civil_state" required>
-                            <option value="Solteiro">Solteiro</option>
-                            <option value="Casado">Casado</option>
-                            <option value="Divorciado">Divorciado</option>
-                            <option value="Viúvo">Viúvo</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Salvar</button>
-                </form>
-            </div>
+            <form method="POST" action="{{ route('employers.store') }}">
+                @csrf
+                <div class="form-group mb-3">
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="name" class="form-control" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" value="{{ old('cpf') }}" class="form-control" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-0" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="birth_date">Data de Nascimento:</label>
+                    <input type="date" id="birth_date" name="birth_date" value="{{ old('birth_date') }}" class="form-control" required>
+                </div>
+                <div class="form-groupm mb-5">
+                    <label for="civil_state">Estado Civil:</label>
+                    <select id="civil_state" name="civil_state" required>
+                        <option value="Solteiro">Solteiro</option>
+                        <option value="Casado">Casado</option>
+                        <option value="Divorciado">Divorciado</option>
+                        <option value="Viúvo">Viúvo</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
         </div>
     </div>
     <script>
