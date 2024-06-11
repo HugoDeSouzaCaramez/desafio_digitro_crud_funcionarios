@@ -7,8 +7,10 @@
                 {{ session('success') }}
             </div>
         @endif
-        <h1>Horas Lançadas</h1>
-
+        <div class="d-flex justify-content-between mb-3">
+            <h1>Horas Lançadas</h1>
+            <a href="{{ route('working-hours.create') }}" class="btn btn-primary btn-sm" style="height: 30px;">Nova</a>
+        </div>
         <date-search></date-search>
         <table class="table">
             <thead>
