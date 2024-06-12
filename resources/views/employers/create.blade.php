@@ -4,7 +4,7 @@
     <script src="{{ asset('js/cpfFormatter.js') }}"></script>
     <div class="container">
         <div class="container">
-            <h1>Cadastrar Funcionario</h1>
+            <h1>Cadastrar Funcionário</h1>
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
