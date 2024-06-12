@@ -19,7 +19,7 @@
             padding-top: 20px;
         }
         .content {
-            margin-left: 250px; /* Same as the width of the sidebar */
+            margin-left: 250px;
             padding: 20px;
             width: 100%;
         }
