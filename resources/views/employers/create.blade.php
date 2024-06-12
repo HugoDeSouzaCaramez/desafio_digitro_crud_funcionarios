@@ -42,7 +42,7 @@
                     </select>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Salvar</button>
+                    <button type="submit" class="btn btn-primary btn-sm" style="height: 30px;">Salvar</button>
                 </div>
             </form>
         </div>

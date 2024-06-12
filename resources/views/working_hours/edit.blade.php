@@ -36,7 +36,9 @@
                     <input type="date" class="form-control" id="date" name="date" value="{{ $workingHour->date }}">
                 </div>
     
-                <button type="submit" class="btn btn-primary">Salvar</button>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-sm" style="height: 30px;">Salvar</button>
+                </div>
             </form>
         </div>
     </div>

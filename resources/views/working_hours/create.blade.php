@@ -34,7 +34,9 @@
                 <input type="number" class="form-control" id="hours_worked" name="hours_worked" min="0" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Salvar</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm" style="height: 30px;">Salvar</button>
+            </div>
         </form>
     </div>
 </div>

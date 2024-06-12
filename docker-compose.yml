@@ -1,39 +1,35 @@
 version: "3.8"
 
 services:
-    # Laravel App Service
     app:
-        build:
-            context: .
-            dockerfile: Dockerfile
-        image: laravel-app
-        container_name: laravel-app
-        restart: unless-stopped
-        working_dir: /var/www
-        volumes:
-            - .:/var/www
-        networks:
-            - laravel
-
-    # MySQL Service
-    mysql:
-        image: mysql:5.7
-        container_name: laravel_mysql
-        restart: unless-stopped
-        environment:
-            MYSQL_DATABASE: desafio_digitro_sti
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_USER: root
-            MYSQL_PASSWORD: root
+        build: .
         ports:
-            - "3306:3306"
+            - "8080:80"
+        environment:
+            - DB_HOST=db
+            - DB_USERNAME=root
+            - DB_PASSWORD=root
+            - DB_DATABASE=mydatabase
+        depends_on:
+            - db
         volumes:
-            - mysql_data:/var/lib/mysql
+            - .:/var/www/html
         networks:
-            - laravel
+            - app-network
 
-networks:
-    laravel:
+    db:
+        image: mysql:5.7
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: mydatabase
+        volumes:
+            - db_data:/var/lib/mysql
+            - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+        networks:
+            - app-network
 
 volumes:
-    mysql_data:
+    db_data:
+
+networks:
+    app-network:
