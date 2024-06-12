@@ -51,7 +51,17 @@ class EmployerController extends Controller
         $query = $request->input('query');
         $employers = Employer::where('name', 'LIKE', "%{$query}%")->get();
 
-        return response()->json($employers);
+        return response()->json($employers->map(function ($employer) {
+            return [
+                'id' => $employer->id,
+                'name' => $employer->name,
+                'email' => $employer->email,
+                'cpf' => $employer->cpf,
+                'civil_state' => $employer->civil_state,
+                'edit_url' => route('employers.edit', $employer->id),
+                'delete_url' => route('employers.destroy', $employer->id),
+            ];
+        }));
     }
 
     public function destroy($id)
