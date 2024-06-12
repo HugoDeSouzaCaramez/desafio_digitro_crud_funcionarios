@@ -33,7 +33,7 @@ return [
     'image'                => 'O :attribute deve ser uma imagem.',
     'in'                   => 'O :attribute selecionado é inválido.',
     'in_array'             => 'O campo :attribute não existe em :other.',
-    'integer'              => 'As horas trabalhadas deve ser um número inteiro válido.',
+    'integer'              => 'As horas trabalhadas devem ser um número inteiro válido.',
     'ip'                   => 'O :attribute deve ser um endereço IP válido.',
     'ipv4'                 => 'O :attribute deve ser um endereço IPv4 válido.',
     'ipv6'                 => 'O :attribute deve ser um endereço IPv6 válido.',
