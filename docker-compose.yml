@@ -9,7 +9,7 @@ services:
             - DB_HOST=db
             - DB_USERNAME=root
             - DB_PASSWORD=root
-            - DB_DATABASE=mydatabase
+            - DB_DATABASE=desafio_digitro_sti
         depends_on:
             - db
         volumes:

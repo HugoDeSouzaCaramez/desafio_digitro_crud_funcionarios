@@ -49,7 +49,7 @@ class EmployerController extends Controller
     public function search(Request $request)
     {
         $query = $request->input('query');
-        $employers = Employer::where('name', 'like', "%$query%")->get();
+        $employers = Employer::where('name', 'LIKE', "%{$query}%")->get();
 
         return response()->json($employers);
     }

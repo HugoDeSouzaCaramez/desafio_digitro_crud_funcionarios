@@ -25,6 +25,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', [EmployerController::class, 'index'])->name('home');
 
     Route::get('/employers', [EmployerController::class, 'index'])->name('employers.index');
+    Route::get('/employers/search', [EmployerController::class, 'search'])->name('employers.search');
     Route::get('/employers/create', [EmployerController::class, 'create'])->name('employers.create');
     Route::post('/employers/store', [EmployerController::class, 'store'])->name('employers.store');
     Route::get('/employers/{id}/edit', [EmployerController::class, 'edit'])->name('employers.edit');
