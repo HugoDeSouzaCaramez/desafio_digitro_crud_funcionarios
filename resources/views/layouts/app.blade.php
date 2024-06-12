@@ -22,7 +22,7 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">Funcionarios</a>
+                                <a class="nav-link" href="{{ route('home') }}">Funcionários</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('working-hours.index') }}">Horas</a>
