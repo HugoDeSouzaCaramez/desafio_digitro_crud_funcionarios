@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Employer;
+use App\Http\Requests\StoreEmployerRequest;
+use App\Http\Requests\UpdateEmployerRequest;
 
 class EmployerController extends Controller
 {
     public function index()
     {
-        $employers = Employer::orderBy('name', 'asc')->paginate(10);;
+        $employers = Employer::orderBy('name', 'asc')->paginate(10);
         return view('employers.index', ['employers' => $employers]);
     }
 
@@ -18,15 +20,8 @@ class EmployerController extends Controller
         return view('employers.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreEmployerRequest $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:employers',
-            'cpf' => 'required|unique:employers|regex:/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/',
-            'birth_date' => 'required|date',
-        ]);
-
         Employer::create($request->all());
 
         return redirect()->route('home')->with('success', 'Funcionario cadastrado com sucesso!');
@@ -43,32 +38,17 @@ class EmployerController extends Controller
         return view('employers.edit', compact('employer'));
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateEmployerRequest $request, $id)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'cpf' => 'required|regex:/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/',
-            'birth_date' => 'required|date',
-        ]);
-
         $employer = Employer::findOrFail($id);
-
-        if ($request->cpf !== $employer->cpf) {
-            $request->validate([
-                'cpf' => 'unique:employers,cpf',
-            ]);
-        }
-
         $employer->update($request->all());
 
-        return redirect()->route('home')->with('success', 'Funcionario atualizado com sucesso!');;
+        return redirect()->route('home')->with('success', 'Funcionario atualizado com sucesso!');
     }
 
     public function search(Request $request)
     {
         $query = $request->input('query');
-
         $employers = Employer::where('name', 'like', "%$query%")->get();
 
         return response()->json($employers);
@@ -81,5 +61,4 @@ class EmployerController extends Controller
 
         return redirect()->route('employers.index')->with('success', 'Funcionario excluído com sucesso.');
     }
-    
 }
