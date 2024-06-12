@@ -16,8 +16,8 @@ class UpdateEmployerRequest extends FormRequest
         $employerId = $this->route('employer');
 
         return [
-            'name' => 'required',
-            'email' => 'required|email|unique:employers,email,' . $employerId,
+            'name' => 'required|max:60',
+            'email' => 'required|email|max:60|unique:employers,email,' . $employerId,
             'cpf' => 'required|regex:/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/|unique:employers,cpf,' . $employerId,
             'birth_date' => 'required|date',
         ];
