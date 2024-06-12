@@ -20,6 +20,7 @@
                     <th>Nome</th>
                     <th>E-mail</th>
                     <th>CPF</th>
+                    <th>Estado civil</th>
                     <th>Ação</th>
                 </tr>
             </thead>
@@ -30,6 +31,7 @@
                     <td><a href="{{ route('employers.edit', $employer->id) }}" title="Editar">{{ $employer->name }}</a></td>
                     <td>{{ $employer->email }}</td>
                     <td>{{ $employer->cpf }}</td>
+                    <td>{{ $employer->civil_state }}</td>
                     <td>
                         <a href="{{ route('employers.edit', $employer->id) }}" title="Editar">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-pen-fill" viewBox="0 0 16 16">
@@ -72,6 +74,7 @@
                             <td><a href="/employers/edit/${employer.id}" title="Editar">${employer.name}</a></td>
                             <td>${employer.email}</td>
                             <td>${employer.cpf}</td>
+                            <td>${employer.civil_state}</td>
                             <td>
                                 <a href="/employers/edit/${employer.id}" title="Editar">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-pen-fill" viewBox="0 0 16 16">
