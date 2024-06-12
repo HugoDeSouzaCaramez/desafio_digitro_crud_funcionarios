@@ -32,16 +32,18 @@
                     <label for="birth_date">Data de Nascimento:</label>
                     <input type="date" id="birth_date" name="birth_date" value="{{ old('birth_date') }}" class="form-control" required>
                 </div>
-                <div class="form-groupm mb-5">
+                <div class="form-group mb-3">
                     <label for="civil_state">Estado Civil:</label>
-                    <select id="civil_state" name="civil_state" required>
+                    <select id="civil_state" name="civil_state" class="form-control" required>
                         <option value="Solteiro">Solteiro</option>
                         <option value="Casado">Casado</option>
                         <option value="Divorciado">Divorciado</option>
                         <option value="Viúvo">Viúvo</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Salvar</button>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Salvar</button>
+                </div>
             </form>
         </div>
     </div>
