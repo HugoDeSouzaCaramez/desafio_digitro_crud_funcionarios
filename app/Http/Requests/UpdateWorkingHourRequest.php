@@ -14,7 +14,7 @@ class UpdateWorkingHourRequest extends FormRequest
     public function rules()
     {
         return [
-            'hours_worked' => 'required|integer|min:0',
+            'hours_worked' => 'required|integer|min:0|max:99999',
             'date' => 'required|date',
         ];
     }

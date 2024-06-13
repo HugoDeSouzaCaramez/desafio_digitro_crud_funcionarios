@@ -39,7 +39,7 @@ return [
     'ipv6'                 => 'O :attribute deve ser um endereço IPv6 válido.',
     'json'                 => 'O :attribute deve ser uma string JSON válida.',
     'max'                  => [
-        'numeric' => 'O :attribute não pode ser maior que :max.',
+        'numeric' => 'As horas trabalhadas não podem ser maior que :max.',
         'file'    => 'O :attribute não pode ser maior que :max kilobytes.',
         'string'  => 'O :attribute não pode ser maior que :max caracteres.',
         'array'   => 'O :attribute não pode ter mais que :max itens.',
