@@ -17,7 +17,7 @@ class WorkingHourController extends Controller
         $workingHours = WorkingHour::orderBy('date', 'desc')->paginate(10);
 
         foreach ($workingHours as $workingHour) {
-            $workingHour->date = Carbon::parse($workingHour->date)->format('d-m-Y');
+            $workingHour->date = Carbon::parse($workingHour->date)->format('d/m/Y');
         }
         
         return view('working_hours.index', ['workingHours' => $workingHours]);
