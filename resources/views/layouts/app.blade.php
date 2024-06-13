@@ -17,17 +17,26 @@
             height: 100%;
             background-color: #f8f9fa;
             padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .content {
             margin-left: 250px;
             padding: 20px;
             width: 100%;
         }
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <nav class="navbar navbar-light bg-light flex-column">
+        <img src="{{ asset('images/digitro.png') }}" alt="Digitro">
+        <nav class="navbar navbar-light bg-light flex-column w-100">
             <div class="container">
                 <ul class="navbar-nav">
                     @guest
