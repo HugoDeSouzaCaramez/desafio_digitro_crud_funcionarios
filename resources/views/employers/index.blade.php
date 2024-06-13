@@ -20,6 +20,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Nome</th>
+                    <th>Nascimento</th>
                     <th>E-mail</th>
                     <th>CPF</th>
                     <th>Estado civil</th>
@@ -31,6 +32,7 @@
                 <tr>
                     <td>{{ $employer->id }}</td>
                     <td><a href="{{ route('employers.edit', $employer->id) }}" title="Editar">{{ $employer->name }}</a></td>
+                    <td>{{ $employer->birth_date }}</td>
                     <td>{{ $employer->email }}</td>
                     <td>{{ $employer->cpf }}</td>
                     <td>{{ $employer->civil_state }}</td>

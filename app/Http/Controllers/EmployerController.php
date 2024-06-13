@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Employer;
+use Carbon\Carbon;
 use App\Http\Requests\StoreEmployerRequest;
 use App\Http\Requests\UpdateEmployerRequest;
 
@@ -12,6 +13,10 @@ class EmployerController extends Controller
     public function index()
     {
         $employers = Employer::orderBy('name', 'asc')->paginate(10);
+        foreach ($employers as $employer) {
+            $employer->birth_date = Carbon::parse($employer->birth_date)->format('d/m/Y');
+        }
+
         return view('employers.index', ['employers' => $employers]);
     }
 
