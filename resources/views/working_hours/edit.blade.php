@@ -29,11 +29,11 @@
                 </div>
                 <div class="form-group mb-3">
                     <label for="hours_worked">Horas Lançadas</label>
-                    <input type="number" class="form-control" id="hours_worked" name="hours_worked" value="{{ $workingHour->hours_worked }}" min="0">
+                    <input type="number" class="form-control" id="hours_worked" name="hours_worked" value="{{ $workingHour->hours_worked }}" min="0" max="99999" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="date">Data</label>
-                    <input type="date" class="form-control" id="date" name="date" value="{{ $workingHour->date }}">
+                    <input type="date" class="form-control" id="date" name="date" value="{{ $workingHour->date }}" required>
                 </div>
     
                 <div class="text-center">

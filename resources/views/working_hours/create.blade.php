@@ -31,7 +31,7 @@
 
             <div class="form-group mb-3">
                 <label for="hours_worked">Horas Trabalhadas:</label>
-                <input type="number" class="form-control" id="hours_worked" name="hours_worked" min="0" required>
+                <input type="number" class="form-control" id="hours_worked" name="hours_worked" min="0" max="99999" required>
             </div>
 
             <div class="text-center">
