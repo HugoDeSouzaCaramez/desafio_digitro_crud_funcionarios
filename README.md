@@ -1,14 +1,14 @@
 <p>Versão PHP 8.3.3</p>
-<p>Versão Node 18.16.0</p>
 <p>Laravel Framework 10.45.1</p>
-<p>Para executar o projeto:</p>
-<p>php artisan serve</p>
-<p>npm run dev</p>
-<p>Realizar as misgrações com: php artisan migrate</p>
-<p>Deve-se registrar-se para fazer login</p>
+<p>Para executar o projeto sem Docker: php artisan serve -> php artisan migrate</p>
+<p>URL padrão para php artisan: http://localhost:8000</p>
+<p>Para executar o projeto com Docker: docker-compose up</p>
+<p>URL padrão para container Docker: http://localhost:8080</p>
+<p>Registrar-se para entrar no sistema via login</p>
 <p>Se for o caso, descomentar em php.ini a linha que contenha extension=mysqli e a linha que contenha extension=pdo_mysql</p>
-<p>altere as credenciais em .env para executar o sistema com outras credenciais, se necessário</p>
-<p>URL padrão: http://localhost:8000</p>
+<p>Altere as credenciais em .env para executar o sistema com outras credenciais de banco de dados, se for necessário</p>
+<p>docker-compose.yml configurado para carregar o banco de dados do arquivo init.sql na raiz do projeto</p>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
