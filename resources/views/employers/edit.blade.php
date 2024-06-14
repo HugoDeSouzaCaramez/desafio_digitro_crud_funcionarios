@@ -31,7 +31,7 @@
             </div>
             <div class="form-group mb-3">
                 <label for="birth_date">Data de Nascimento:</label>
-                <input type="date" id="birth_date" name="birth_date" value="{{ $employer->birth_date }}" class="form-control" required>
+                <input type="date" id="birth_date" name="birth_date" value="{{ $employer->birth_date }}" class="form-control" min="1900-01-01" max="9999-12-31" required>
             </div>
             <div class="form-group mb-3">
                 <label for="civil_state">Estado Civil:</label>
