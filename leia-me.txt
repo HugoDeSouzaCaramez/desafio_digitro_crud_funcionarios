@@ -1,0 +1,10 @@
+Autor: Hugo de Souza Caramez
+Versão PHP 8.3.3
+Laravel Framework 10.45.1
+Para executar o projeto sem Docker: php artisan serve -> php artisan migrate
+URL padrão para php artisan: http://localhost:8000
+Para executar o projeto com Docker: docker-compose up
+URL padrão para container Docker: http://localhost:8080
+Registrar-se para entrar no sistema via login
+docker-compose.yml configurado para carregar o banco de dados do arquivo init.sql na raiz do projeto
+Altere as credenciais em .env para executar o sistema com outras credenciais de banco de dados, se for necessário
